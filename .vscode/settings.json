@@ -1,0 +1,7 @@
+{
+    "tailwindCSS.includeLanguages": {
+        "jsx": "html",
+        "tsx": "html"
+    },
+    "tailwindCSS.emmetCompletions": true
+}
