@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className=" bg-slate-500 flex flex-col items-center justify-between">
+    <main className=" /*bg-slate-500*/ flex flex-col items-center justify-between">
       <img
         className="w-100 h-auto"
         src="landingPageBanner.jpg"
@@ -28,8 +28,8 @@ export default function Home() {
                     fill="none"
                     stroke="currentColor"
                     strokeLinecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="w-6 h-6"
                     viewBox="0 0 24 24"
                   >
@@ -52,8 +52,8 @@ export default function Home() {
                     fill="none"
                     stroke="currentColor"
                     strokeLinecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="w-6 h-6"
                     viewBox="0 0 24 24"
                   >
@@ -78,8 +78,8 @@ export default function Home() {
                     fill="none"
                     stroke="currentColor"
                     strokeLinecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="w-6 h-6"
                     viewBox="0 0 24 24"
                   >
@@ -103,8 +103,8 @@ export default function Home() {
                     fill="none"
                     stroke="currentColor"
                     strokeLinecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="w-6 h-6"
                     viewBox="0 0 24 24"
                   >
@@ -127,8 +127,8 @@ export default function Home() {
                     fill="none"
                     stroke="currentColor"
                     strokeLinecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="w-6 h-6"
                     viewBox="0 0 24 24"
                   >
@@ -151,8 +151,8 @@ export default function Home() {
                     fill="none"
                     stroke="currentColor"
                     strokeLinecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="w-6 h-6"
                     viewBox="0 0 24 24"
                   >
