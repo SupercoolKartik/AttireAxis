@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { ChangeEvent, useState, useEffect } from "react";
 
 const product = ({
   params,
@@ -7,6 +8,31 @@ const product = ({
     productId: string;
   };
 }) => {
+  const [service, setService] = useState<boolean | null>(null);
+  const [pin, setPin] = useState("");
+  console.log(pin);
+
+  const pinCheck = async () => {
+    console.log("Checking pincode...");
+    const pins = await fetch("http://localhost:3000/api/pincode");
+    const pinsJson = await pins.json();
+    console.log(pinsJson);
+    if (pinsJson.includes(parseInt(pin))) {
+      setService(true);
+    } else {
+      setService(false);
+    }
+  };
+
+  const enteringPin = (e: ChangeEvent<HTMLInputElement>) => {
+    console.log(e);
+    setPin(e.target.value);
+    console.log(pin);
+  };
+
+  useEffect(() => {
+    console.log("Service is", service);
+  }, [service]);
   return (
     <div>
       <section className="text-gray-600 body-font overflow-hidden">
@@ -20,7 +46,7 @@ const product = ({
 
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 p-5 lg:mt-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
-                BRAND NAME
+                AttireAxis
               </h2>
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
                 {params.productId}
@@ -163,14 +189,11 @@ const product = ({
                   </div>
                 </div>
               </div>
-              <div className="flex">
-                <span className="title-font font-medium text-2xl text-gray-900">
-                  $58.00
+              <div className="flex justify-start items-center">
+                <span className="title-font font-sm md:font-medium md:text-2xl text-green-700">
+                  ₹499.00
                 </span>
-                <button className="flex ml-auto text-white bg-red-400 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
-                  Button
-                </button>
-                <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 md:ml-4 ml-1">
                   <svg
                     fill="currentColor"
                     strokeLinecap="round"
@@ -182,7 +205,39 @@ const product = ({
                     <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                   </svg>
                 </button>
+                <button className="flex md:ml-4 ml-1 text-white bg-red-400 border-0 py-2 md:px-6 px-1 md:font-semibold  text-sm focus:outline-none hover:bg-red-600 rounded">
+                  Buy Now
+                </button>
+                <button className="flex md:ml-4 ml-1 text-white bg-red-400 border-0 py-2 md:px-6 px-1 md:font-semibold text-sm focus:outline-none hover:bg-red-600 rounded">
+                  Add To Cart
+                </button>
               </div>
+              <div className="flex my-2">
+                <input
+                  onChange={enteringPin}
+                  name="pin"
+                  className="w-1/2 bg-gray-200 border border-gray-300 rounded-l py-2 px-4 focus:outline-none"
+                  type="text"
+                  placeholder="Enter Pincode"
+                />
+                <button
+                  onClick={pinCheck}
+                  className="flex-shrink-0 md:ml-4 bg-red-400 text-white py-2 px-3 focus:outline-none hover:bg-red-600 rounded-md"
+                >
+                  Check Availability
+                </button>
+              </div>
+              {!service && service != null && (
+                <p className="font-semibold text-sm ps-1 mt-2 text-red-600">
+                  Service is not available for this region!
+                </p>
+              )}
+
+              {service && (
+                <p className="font-semibold text-sm ps-1 mt-2 text-green-700">
+                  Yay! The Service is available for this region.
+                </p>
+              )}
             </div>
           </div>
         </div>
