@@ -45,7 +45,7 @@ export const AppWrapper = ({ children }: { children: React.ReactNode }) => {
     const newCart: Cart = cart;
 
     if (itemCode in newCart) {
-      if (newCart[itemCode].qty > 0) {
+      if (newCart[itemCode].qty > 1) {
         newCart[itemCode].qty--;
       } else {
         delete newCart[itemCode];
