@@ -1,6 +1,10 @@
-import Image from "next/image";
-
+"use client";
+import { useContext } from "react";
+import { MouseEventHandler } from "react";
+import { useAppContext } from "@/context/globalContext";
 export default function Home() {
+  const { first, randFun, setfirst } = useAppContext();
+
   return (
     <main className=" /*bg-slate-500*/ flex flex-col items-center justify-between">
       <img
@@ -14,7 +18,7 @@ export default function Home() {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
             <h1 className="sm:text-3xl text-2xl title-font mb-2 text-gray-900 font-semibold ">
-              Get your Outfits for Days.
+              AttireAxis Content
             </h1>
             <p className="lg:w-1/2 w-full leading-relaxed text-white">
               Make every OOTD moments special for you.

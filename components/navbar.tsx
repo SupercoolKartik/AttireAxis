@@ -1,13 +1,24 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Link from "next/link";
 import { BsCart2 } from "react-icons/bs";
 import { IoMdCloseCircle } from "react-icons/io";
 import { HiPlusCircle, HiMinusCircle } from "react-icons/hi";
 import { IoBagCheckOutline } from "react-icons/io5";
+import { useAppContext } from "@/context/globalContext";
 
 const Navbar = () => {
+  // Define the structure of the CartItem object
+  interface CartItem {
+    name: string;
+    qty: number;
+    color: string;
+    price: number;
+    size: string;
+  }
   const ref = useRef<HTMLDivElement>(null);
+  const { cart, addToCart, removeFromCart, clearCart, subTotal } =
+    useAppContext();
 
   const toggleCart = () => {
     if (ref.current) {
@@ -58,7 +69,7 @@ const Navbar = () => {
         {/* SideCart */}
         <div
           ref={ref}
-          className="sidebar absolute w-[70%] h-screen overflow-auto sm:w-72 top-0 right-0 p-10 bg-pink-200 text-black transform transition-transform duration-150 translate-x-full shadow-xl rounded-sm"
+          className="sidebar absolute w-[70%] h-screen overflow-auto sm:w-72 top-0 right-0 p-10 bg-pink-200 text-black transform transition-transform duration-150 translate-x-full shadow-xl rounded-l-md"
         >
           <span
             onClick={toggleCart}
@@ -66,141 +77,61 @@ const Navbar = () => {
           >
             <IoMdCloseCircle />
           </span>
-          <h1 className="font-bold text-lg text-center">Cart Items</h1>
+          <h1 className="font-bold text-lg text-center mb-3">Cart Items</h1>
+          {Object.keys(cart).length == 0 && (
+            <p className="flex justify-center text-center font-semibold text-red-500">
+              Your cart is empty!
+            </p>
+          )}
           <ol className="list-decimal text-sm font-semibold">
-            <li className="my-3">
-              <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-2/3 overflow-hidden ">Item XYZ</div>
-                <div className=" sm:w-1/3 flex md:items-center md:justify-center justify-start">
-                  <span className="text-lg text-red-700">
-                    <HiMinusCircle className="me-2 cursor-pointer" />
-                  </span>
-                  1
-                  <span className="text-lg text-red-700">
-                    <HiPlusCircle className="ms-2 cursor-pointer" />
-                  </span>
+            {Object.keys(cart).map((itemCode: string) => (
+              <li className="my-3" key={itemCode}>
+                <div className="flex flex-col sm:flex-row">
+                  <div className="sm:w-2/3 overflow-hidden">
+                    {cart[itemCode].name}
+                  </div>
+                  <div className="sm:w-1/3 flex md:items-center md:justify-center justify-start">
+                    <span className="text-lg text-red-700">
+                      <HiMinusCircle
+                        onClick={() => {
+                          removeFromCart(itemCode);
+                        }}
+                        className="me-2 cursor-pointer"
+                      />
+                    </span>
+                    {cart[itemCode].qty}
+                    <span className="text-lg text-red-700">
+                      <HiPlusCircle
+                        onClick={() => {
+                          addToCart(
+                            itemCode,
+                            cart[itemCode].name,
+                            1,
+                            cart[itemCode].color,
+                            cart[itemCode].price,
+                            cart[itemCode].size
+                          );
+                        }}
+                        className="ms-2 cursor-pointer"
+                      />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li className="my-3">
-              <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-2/3 overflow-hidden ">Item XYZ</div>
-                <div className=" sm:w-1/3 flex md:items-center md:justify-center justify-start">
-                  <span className="text-lg text-red-700">
-                    <HiMinusCircle className="me-2 cursor-pointer" />
-                  </span>
-                  1
-                  <span className="text-lg text-red-700">
-                    <HiPlusCircle className="ms-2 cursor-pointer" />
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li className="my-3">
-              <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-2/3 overflow-hidden ">Item XYZ</div>
-                <div className=" sm:w-1/3 flex md:items-center md:justify-center justify-start">
-                  <span className="text-lg text-red-700">
-                    <HiMinusCircle className="me-2 cursor-pointer" />
-                  </span>
-                  1
-                  <span className="text-lg text-red-700">
-                    <HiPlusCircle className="ms-2 cursor-pointer" />
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li className="my-3">
-              <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-2/3 overflow-hidden ">Item XYZ</div>
-                <div className=" sm:w-1/3 flex md:items-center md:justify-center justify-start">
-                  <span className="text-lg text-red-700">
-                    <HiMinusCircle className="me-2 cursor-pointer" />
-                  </span>
-                  1
-                  <span className="text-lg text-red-700">
-                    <HiPlusCircle className="ms-2 cursor-pointer" />
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li className="my-3">
-              <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-2/3 overflow-hidden ">Item XYZ</div>
-                <div className=" sm:w-1/3 flex md:items-center md:justify-center justify-start">
-                  <span className="text-lg text-red-700">
-                    <HiMinusCircle className="me-2 cursor-pointer" />
-                  </span>
-                  1
-                  <span className="text-lg text-red-700">
-                    <HiPlusCircle className="ms-2 cursor-pointer" />
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li className="my-3">
-              <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-2/3 overflow-hidden ">Item XYZ</div>
-                <div className=" sm:w-1/3 flex md:items-center md:justify-center justify-start">
-                  <span className="text-lg text-red-700">
-                    <HiMinusCircle className="me-2 cursor-pointer" />
-                  </span>
-                  1
-                  <span className="text-lg text-red-700">
-                    <HiPlusCircle className="ms-2 cursor-pointer" />
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li className="my-3">
-              <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-2/3 overflow-hidden ">Item XYZ</div>
-                <div className=" sm:w-1/3 flex md:items-center md:justify-center justify-start">
-                  <span className="text-lg text-red-700">
-                    <HiMinusCircle className="me-2 cursor-pointer" />
-                  </span>
-                  1
-                  <span className="text-lg text-red-700">
-                    <HiPlusCircle className="ms-2 cursor-pointer" />
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li className="my-3">
-              <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-2/3 overflow-hidden ">Item XYZ</div>
-                <div className=" sm:w-1/3 flex md:items-center md:justify-center justify-start">
-                  <span className="text-lg text-red-700">
-                    <HiMinusCircle className="me-2 cursor-pointer" />
-                  </span>
-                  1
-                  <span className="text-lg text-red-700">
-                    <HiPlusCircle className="ms-2 cursor-pointer" />
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li className="my-3">
-              <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-2/3 overflow-hidden ">Item XYZ</div>
-                <div className=" sm:w-1/3 flex md:items-center md:justify-center justify-start">
-                  <span className="text-lg text-red-700">
-                    <HiMinusCircle className="me-2 cursor-pointer" />
-                  </span>
-                  1
-                  <span className="text-lg text-red-700">
-                    <HiPlusCircle className="ms-2 cursor-pointer" />
-                  </span>
-                </div>
-              </div>
-            </li>
+              </li>
+            ))}
           </ol>
+          <p className="font-semibold mt-2">Subtotal is : {subTotal}</p>
           <div className="buttons flex flex-col sm:flex-row">
             <button className="flex mx-auto mt-8 text-white bg-green-600 border-0 py-2 px-2  focus:outline-none hover:bg-green-500 rounded-md items-center text-sm font-semibold">
               <IoBagCheckOutline className="me-2 text-lg" />
               <span className="">Checkout</span>
             </button>
-            <button className="flex mx-auto sm:mt-8 mt-2 text-white bg-red-600 border-0 py-1 px-2 focus:outline-none hover:bg-red-700 rounded-md items-center text-sm font-semibold">
+            <button
+              onClick={() => {
+                clearCart();
+              }}
+              className="flex mx-auto sm:mt-8 mt-2 text-white bg-red-600 border-0 py-1 px-2 focus:outline-none hover:bg-red-700 rounded-md items-center text-sm font-semibold"
+            >
               Clear Cart
             </button>
           </div>

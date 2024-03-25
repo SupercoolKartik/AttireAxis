@@ -1,5 +1,6 @@
 "use client";
 import React, { ChangeEvent, useState, useEffect } from "react";
+import { useAppContext } from "@/context/globalContext";
 
 const product = ({
   params,
@@ -8,30 +9,32 @@ const product = ({
     productId: string;
   };
 }) => {
+  // Checking Service Availablity
   const [service, setService] = useState<boolean | null>(null);
   const [pin, setPin] = useState("");
-  console.log(pin);
 
   const pinCheck = async () => {
     console.log("Checking pincode...");
     const pins = await fetch("http://localhost:3000/api/pincode");
     const pinsJson = await pins.json();
-    console.log(pinsJson);
+
     if (pinsJson.includes(parseInt(pin))) {
       setService(true);
     } else {
       setService(false);
     }
   };
-
   const enteringPin = (e: ChangeEvent<HTMLInputElement>) => {
-    console.log(e);
     setPin(e.target.value);
-    console.log(pin);
   };
+  //-------------------------------------------------------
+
+  //Cart Functionalities
+  const { addToCart } = useAppContext();
+  //-------------------------------------------------------
 
   useEffect(() => {
-    console.log("Service is", service);
+    console.log("Service : ", service);
   }, [service]);
   return (
     <div>
@@ -205,10 +208,15 @@ const product = ({
                     <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                   </svg>
                 </button>
-                <button className="flex md:ml-4 ml-1 text-white bg-red-400 border-0 py-2 md:px-6 px-1 md:font-semibold  text-sm focus:outline-none hover:bg-red-600 rounded">
+                <button className="flex md:ml-4 ml-1 text-white bg-red-400 border-0 py-2 md:px-3 px-1 md:font-semibold  text-sm focus:outline-none hover:bg-red-600 rounded">
                   Buy Now
                 </button>
-                <button className="flex md:ml-4 ml-1 text-white bg-red-400 border-0 py-2 md:px-6 px-1 md:font-semibold text-sm focus:outline-none hover:bg-red-600 rounded">
+                <button
+                  onClick={() => {
+                    addToCart("abc", "NameABC", 1, "red", 500, "small");
+                  }}
+                  className="flex md:ml-4 ml-1 text-white bg-red-400 border-0 py-2 md:px-3 px-1 md:font-semibold text-sm focus:outline-none hover:bg-red-600 rounded"
+                >
                   Add To Cart
                 </button>
               </div>
