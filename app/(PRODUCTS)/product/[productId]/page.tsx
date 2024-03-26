@@ -213,7 +213,7 @@ const product = ({
                 </button>
                 <button
                   onClick={() => {
-                    addToCart("abc", "NameABC", 1, "red", 500, "small");
+                    addToCart("def", "NameDEF", 1, "red", 500, "small");
                   }}
                   className="flex md:ml-4 ml-1 text-white bg-red-400 border-0 py-2 md:px-3 px-1 md:font-semibold text-sm focus:outline-none hover:bg-red-600 rounded"
                 >

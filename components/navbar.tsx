@@ -8,14 +8,6 @@ import { IoBagCheckOutline } from "react-icons/io5";
 import { useAppContext } from "@/context/globalContext";
 
 const Navbar = () => {
-  // Define the structure of the CartItem object
-  interface CartItem {
-    name: string;
-    qty: number;
-    color: string;
-    price: number;
-    size: string;
-  }
   const ref = useRef<HTMLDivElement>(null);
   const { cart, addToCart, removeFromCart, clearCart, subTotal } =
     useAppContext();
@@ -120,12 +112,14 @@ const Navbar = () => {
               </li>
             ))}
           </ol>
-          <p className="font-semibold mt-2">Subtotal is : {subTotal}</p>
+          <p className="font-bold mt-2">Subtotal is : ₹{subTotal}</p>
           <div className="buttons flex flex-col sm:flex-row">
-            <button className="flex mx-auto mt-8 text-white bg-green-600 border-0 py-2 px-2  focus:outline-none hover:bg-green-500 rounded-md items-center text-sm font-semibold">
-              <IoBagCheckOutline className="me-2 text-lg" />
-              <span className="">Checkout</span>
-            </button>
+            <Link href={"/checkout"}>
+              <button className="flex mx-auto mt-8 text-white bg-green-600 border-0 py-2 px-2  focus:outline-none hover:bg-green-500 rounded-md items-center text-sm font-semibold">
+                <IoBagCheckOutline className="me-2 text-lg" />
+                <span className="">Checkout</span>
+              </button>
+            </Link>
             <button
               onClick={() => {
                 clearCart();
