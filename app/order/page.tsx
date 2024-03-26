@@ -21,7 +21,7 @@ const order = () => {
                 seitan poutine tumeric. Gastropub blue bottle austin listicle
                 pour-over, neutr
               </p>
-              <div className="flex border-gray-200 py-2 mb-3 mt-2 font-semibold /*justify-center items-center*/ ">
+              <div className="flex border-gray-200 py-2 mb-3 mt-2 font-semibold justify-between">
                 <span className="text-center  text-gray-900">
                   Item Description
                 </span>
