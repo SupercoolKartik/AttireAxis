@@ -26,7 +26,7 @@ const checkout = () => {
             type="text"
             id="name"
             name="name"
-            className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700  px-3 leading-8 transition-colors duration-200 ease-in-out"
+            className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700  px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
         </div>
         <div className="md:w-1/2 w-full mb-2 sm:ms-1">
@@ -37,7 +37,7 @@ const checkout = () => {
             type="email"
             id="email"
             name="email"
-            className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700  px-3 leading-8 transition-colors duration-200 ease-in-out"
+            className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700  px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
         </div>
       </div>
@@ -50,7 +50,7 @@ const checkout = () => {
           id="address"
           cols={30}
           rows={3}
-          className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700  px-3 leading-8 transition-colors duration-200 ease-in-out"
+          className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700  px-3 leading-8 transition-colors duration-200 ease-in-out"
         ></textarea>
       </div>
       <div className="flex sm:flex-row flex-col md:mx-24 mx-16">
@@ -62,7 +62,7 @@ const checkout = () => {
             type="number"
             id="phone"
             name="phone"
-            className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700  px-3 leading-8 transition-colors duration-200 ease-in-out"
+            className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700  px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
         </div>
         <div className="md:w-1/2 w-full mb-2 sm:ms-1">
@@ -73,7 +73,7 @@ const checkout = () => {
             type="text"
             id="city"
             name="city"
-            className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700  px-3 leading-8 transition-colors duration-200 ease-in-out"
+            className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700  px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
         </div>
       </div>
@@ -86,7 +86,7 @@ const checkout = () => {
             type="text"
             id="state"
             name="state"
-            className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700  px-3 leading-8 transition-colors duration-200 ease-in-out"
+            className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700  px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
         </div>
         <div className="md:w-1/2 w-full mb-2 sm:ms-1">
@@ -97,7 +97,7 @@ const checkout = () => {
             type="number"
             id="pincode"
             name="pincode"
-            className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700  px-3 leading-8 transition-colors duration-200 ease-in-out"
+            className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700  px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
         </div>
       </div>
@@ -147,7 +147,7 @@ const checkout = () => {
         </ol>
         <p className="font-bold mt-2">Subtotal is : ₹{subTotal}</p>
         <div className="buttons flex flex-col sm:flex-row">
-          <Link href={"/checkout"}>
+          <Link href={"/"}>
             <button className="flex mx-auto mt-8 text-white bg-green-600 border-0 py-2 px-2  focus:outline-none hover:bg-green-500 rounded-md items-center text-sm font-semibold">
               <IoBagCheckOutline className="me-2 text-lg" />
               <span className="">Pay ₹{subTotal}</span>
