@@ -6,6 +6,7 @@ import { IoMdCloseCircle } from "react-icons/io";
 import { HiPlusCircle, HiMinusCircle } from "react-icons/hi";
 import { IoBagCheckOutline } from "react-icons/io5";
 import { useAppContext } from "@/context/globalContext";
+import { MdAccountCircle } from "react-icons/md";
 
 const Navbar = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -34,7 +35,6 @@ const Navbar = () => {
             AttireAxis
           </span>
         </Link>
-
         <nav className="mx-5 flex flex-wrap items-center text-base font-bold justify-between">
           <Link className="mr-5 hover:text-white" href={"/tshirts"}>
             T-Shirts
@@ -49,14 +49,22 @@ const Navbar = () => {
             Mugs
           </Link>
         </nav>
-        <button
-          onClick={toggleCart}
-          className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0 /**/ md:absolute md:right-4 font-bold"
-        >
-          <span className="font-bold md:text-xl">
-            <BsCart2 />
-          </span>
-        </button>
+        <div className="flex  justify-center items-center md:absolute md:right-2">
+          <Link
+            href={"/login"}
+            className="inline-flex items-center border-0 py-1 px-3 focus:outline-none  text-2xl me-1 hover:text-white /**/  font-bold"
+          >
+            <MdAccountCircle />
+          </Link>
+          <button
+            onClick={toggleCart}
+            className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-400 hover:text-black rounded text-base /**/   font-bold"
+          >
+            <span className="font-bold md:text-xl">
+              <BsCart2 />
+            </span>
+          </button>
+        </div>
 
         {/* SideCart */}
         <div
