@@ -53,7 +53,7 @@ const login = () => {
             Login to AttireAxis
           </CardTitle>
           <CardDescription className="text-xs font-semibold text-black">
-            or{" "}
+            don't have an account?{" "}
             <Link
               href={"/signup"}
               className=" text-red-700 hover:text-red-900 "
@@ -109,7 +109,9 @@ const login = () => {
                   Forgot Password?
                 </p>
               </Link>
-              <Button type="submit">Submit</Button>
+              <Button className="bg-gray-900 hover:bg-gray-950" type="submit">
+                Submit
+              </Button>
             </form>
           </Form>
         </CardContent>

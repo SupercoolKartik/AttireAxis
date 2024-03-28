@@ -74,7 +74,7 @@ const signup = () => {
             Signup to AttireAxis
           </CardTitle>
           <CardDescription className="text-xs font-semibold text-black">
-            allready have an account?{" "}
+            already have an account?{" "}
             <Link href={"/login"} className=" text-red-700 hover:text-red-900 ">
               Login
             </Link>
@@ -155,7 +155,9 @@ const signup = () => {
                   </FormItem>
                 )}
               />
-              <Button type="submit">Submit</Button>
+              <Button className="bg-gray-900 hover:bg-gray-950" type="submit">
+                Submit
+              </Button>
             </form>
           </Form>
         </CardContent>

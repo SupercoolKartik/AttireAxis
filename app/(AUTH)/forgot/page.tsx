@@ -80,7 +80,9 @@ const forgot = () => {
                   </FormItem>
                 )}
               />
-              <Button type="submit">Submit</Button>
+              <Button className="bg-gray-900 hover:bg-gray-950" type="submit">
+                Submit
+              </Button>
             </form>
           </Form>
         </CardContent>
