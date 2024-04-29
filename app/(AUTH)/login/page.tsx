@@ -31,7 +31,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-const login = () => {
+const Login = () => {
   // const form = useForm<z.infer<typeof loginSchema>>({
   const form = useForm({
     resolver: zodResolver(loginSchema),
@@ -53,7 +53,7 @@ const login = () => {
             Login to AttireAxis
           </CardTitle>
           <CardDescription className="text-xs font-semibold text-black">
-            don't have an account?{" "}
+            don&apost have an account?{" "}
             <Link
               href={"/signup"}
               className=" text-red-700 hover:text-red-900 "
@@ -120,4 +120,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

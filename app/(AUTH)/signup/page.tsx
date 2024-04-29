@@ -51,7 +51,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-const signup = () => {
+const Signup = () => {
   // 1. Define your form.
   const form = useForm<z.infer<typeof signupSchema>>({
     resolver: zodResolver(signupSchema),
@@ -166,4 +166,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Signup;

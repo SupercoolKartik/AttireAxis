@@ -1,8 +1,9 @@
 "use client";
 import React, { ChangeEvent, useState, useEffect } from "react";
 import { useAppContext } from "@/context/globalContext";
+import Image from "next/image";
 
-const product = ({
+const Product = ({
   params,
 }: {
   params: {
@@ -41,7 +42,9 @@ const product = ({
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-0 py-16 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
-            <img
+            <Image
+              width={1200}
+              height={1800}
               alt="ecommerce"
               className="lg:w-1/2 lg:h-auto w-full px-10  md:px-5 object-cover object-top rounded-sm"
               src="https://www.redwolf.in/image/cache/catalog/mens-t-shirts/vengeance-t-shirt-female-model-600x800.jpg?m=1687857384"
@@ -254,4 +257,4 @@ const product = ({
   );
 };
 
-export default product;
+export default Product;

@@ -39,7 +39,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-const forgot = () => {
+const Forgot = () => {
   // 1. Define your form.
   const form = useForm<z.infer<typeof forgotSchema>>({
     resolver: zodResolver(forgotSchema),
@@ -91,4 +91,4 @@ const forgot = () => {
   );
 };
 
-export default forgot;
+export default Forgot;

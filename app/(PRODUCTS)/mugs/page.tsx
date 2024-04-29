@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
-const mugs = () => {
+import Image from "next/image";
+
+const Mugs = () => {
   return (
     <div>
       <section className="text-gray-600 body-font">
@@ -11,8 +13,10 @@ const mugs = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://m.media-amazon.com/images/I/31mVuCkpc4L.jpg"
                 />
@@ -36,8 +40,10 @@ const mugs = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://m.media-amazon.com/images/I/31mVuCkpc4L.jpg"
                 />
@@ -61,8 +67,10 @@ const mugs = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://m.media-amazon.com/images/I/31mVuCkpc4L.jpg"
                 />
@@ -86,8 +94,10 @@ const mugs = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://m.media-amazon.com/images/I/31mVuCkpc4L.jpg"
                 />
@@ -111,8 +121,10 @@ const mugs = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://m.media-amazon.com/images/I/31mVuCkpc4L.jpg"
                 />
@@ -136,8 +148,10 @@ const mugs = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://m.media-amazon.com/images/I/31mVuCkpc4L.jpg"
                 />
@@ -161,8 +175,10 @@ const mugs = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://m.media-amazon.com/images/I/31mVuCkpc4L.jpg"
                 />
@@ -186,8 +202,10 @@ const mugs = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://m.media-amazon.com/images/I/31mVuCkpc4L.jpg"
                 />
@@ -211,8 +229,10 @@ const mugs = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://m.media-amazon.com/images/I/31mVuCkpc4L.jpg"
                 />
@@ -236,8 +256,10 @@ const mugs = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://m.media-amazon.com/images/I/31mVuCkpc4L.jpg"
                 />
@@ -261,8 +283,10 @@ const mugs = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://m.media-amazon.com/images/I/31mVuCkpc4L.jpg"
                 />
@@ -286,8 +310,10 @@ const mugs = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://m.media-amazon.com/images/I/31mVuCkpc4L.jpg"
                 />
@@ -313,4 +339,4 @@ const mugs = () => {
   );
 };
 
-export default mugs;
+export default Mugs;

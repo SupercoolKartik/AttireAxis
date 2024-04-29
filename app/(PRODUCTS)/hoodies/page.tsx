@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
-const hoodies = () => {
+import Image from "next/image";
+
+const Hoodies = () => {
   return (
     <div>
       <section className="text-gray-600 body-font">
@@ -11,8 +13,10 @@ const hoodies = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="400"
+                  width="300"
                   className="object-cover object-center h-full block"
                   src="https://www.redwolf.in/image/cache/catalog/hoodies/dc-comics-batman-red-logo-hoodie-india-600x800.jpg?m=1703139415"
                 />
@@ -36,8 +40,10 @@ const hoodies = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://www.redwolf.in/image/cache/catalog/hoodies/dc-comics-batman-red-logo-hoodie-india-600x800.jpg?m=1703139415"
                 />
@@ -61,8 +67,10 @@ const hoodies = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://www.redwolf.in/image/cache/catalog/hoodies/dc-comics-batman-red-logo-hoodie-india-600x800.jpg?m=1703139415"
                 />
@@ -86,8 +94,10 @@ const hoodies = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://www.redwolf.in/image/cache/catalog/hoodies/dc-comics-batman-red-logo-hoodie-india-600x800.jpg?m=1703139415"
                 />
@@ -111,8 +121,10 @@ const hoodies = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://www.redwolf.in/image/cache/catalog/hoodies/dc-comics-batman-red-logo-hoodie-india-600x800.jpg?m=1703139415"
                 />
@@ -136,8 +148,10 @@ const hoodies = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://www.redwolf.in/image/cache/catalog/hoodies/dc-comics-batman-red-logo-hoodie-india-600x800.jpg?m=1703139415"
                 />
@@ -161,8 +175,10 @@ const hoodies = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://www.redwolf.in/image/cache/catalog/hoodies/dc-comics-batman-red-logo-hoodie-india-600x800.jpg?m=1703139415"
                 />
@@ -186,8 +202,10 @@ const hoodies = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://www.redwolf.in/image/cache/catalog/hoodies/dc-comics-batman-red-logo-hoodie-india-600x800.jpg?m=1703139415"
                 />
@@ -211,8 +229,10 @@ const hoodies = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://www.redwolf.in/image/cache/catalog/hoodies/dc-comics-batman-red-logo-hoodie-india-600x800.jpg?m=1703139415"
                 />
@@ -236,8 +256,10 @@ const hoodies = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://www.redwolf.in/image/cache/catalog/hoodies/dc-comics-batman-red-logo-hoodie-india-600x800.jpg?m=1703139415"
                 />
@@ -261,8 +283,10 @@ const hoodies = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://www.redwolf.in/image/cache/catalog/hoodies/dc-comics-batman-red-logo-hoodie-india-600x800.jpg?m=1703139415"
                 />
@@ -286,8 +310,10 @@ const hoodies = () => {
               className="lg:w-1/4 md:w-1/2 p-4 w-full /**/ md:mx-0 sm:m-9 mx-5 rounded-sm hover:shadow-2xl"
             >
               <a className="block relative rounded overflow-hidden">
-                <img
+                <Image
                   alt="ecommerce"
+                  height="800"
+                  width="600"
                   className="object-cover object-center h-full block"
                   src="https://www.redwolf.in/image/cache/catalog/hoodies/dc-comics-batman-red-logo-hoodie-india-600x800.jpg?m=1703139415"
                 />
@@ -313,4 +339,4 @@ const hoodies = () => {
   );
 };
 
-export default hoodies;
+export default Hoodies;

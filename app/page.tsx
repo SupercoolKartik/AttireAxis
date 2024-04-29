@@ -2,13 +2,16 @@
 import { useContext } from "react";
 import { MouseEventHandler } from "react";
 import { useAppContext } from "@/context/globalContext";
+import Image from "next/image";
+
 export default function Home() {
   const { first, randFun, setfirst } = useAppContext();
 
   return (
     <main className=" /*bg-slate-500*/ flex flex-col items-center justify-between">
-      <img
-        className="w-100 h-auto"
+      <Image
+        width={1200}
+        height={1000}
         src="landingPageBanner.jpg"
         alt="landing_page_banner"
       />

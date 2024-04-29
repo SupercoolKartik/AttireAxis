@@ -5,7 +5,7 @@ import { HiPlusCircle, HiMinusCircle } from "react-icons/hi";
 import { IoBagCheckOutline } from "react-icons/io5";
 import { useAppContext } from "@/context/globalContext";
 
-const checkout = () => {
+const Checkout = () => {
   const { cart, addToCart, removeFromCart, subTotal } = useAppContext();
   return (
     <div className="flex flex-col">
@@ -159,4 +159,4 @@ const checkout = () => {
   );
 };
 
-export default checkout;
+export default Checkout;

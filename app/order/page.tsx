@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 const order = () => {
   return (
     <div>
@@ -53,8 +53,10 @@ const order = () => {
                 </button>
               </div>
             </div>
-            <img
+            <Image
               alt="ecommerce"
+              height={1000}
+              width={1200}
               className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
               src="https://dummyimage.com/400x400"
             />

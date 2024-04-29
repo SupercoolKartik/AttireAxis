@@ -7,7 +7,7 @@ import { HiPlusCircle, HiMinusCircle } from "react-icons/hi";
 import { IoBagCheckOutline } from "react-icons/io5";
 import { useAppContext } from "@/context/globalContext";
 import { MdAccountCircle } from "react-icons/md";
-
+import Image from "next/image";
 const Navbar = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { cart, addToCart, removeFromCart, clearCart, subTotal } =
@@ -30,7 +30,12 @@ const Navbar = () => {
           href={"/"}
           className="flex title-font font-medium items-center text-white mb-4 md:mb-0"
         >
-          <img className="h-8 w-8" src="/logo.png" alt="attire_axis_logo" />
+          <Image
+            height={32}
+            width={32}
+            src="/logo.png"
+            alt="attire_axis_logo"
+          />
           <span className="ml-3 text-xl font-bold text-red-400">
             AttireAxis
           </span>
